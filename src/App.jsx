@@ -1,33 +1,40 @@
 import React from "react"
-import Cards from "./components/Cards"
-import contactFile from "./components/contact"
+import contactFile from "./components/Day 1- 3/contact"
+import Card from "./components/Day4/Card"
+import Avatar from "./components/Day4/Avatar"
 
 function App() {
+  
+//   const createCard = (item) =>{
+//     return(
+//      <Card 
+//      key = {item.id}
+//      name = {item.name}
+//      imgUrl = {item.imgUrl}
+//      phone = {item.phone}
+//      email = {item.email}
+//     />
+//     )
+//  }
+
 
   return (
     <>
      <h1 className="text-3xl font-bold mb-9">My Contact</h1>
-     <Cards 
-     name = {contactFile[0].name}
-     imgUrl = {contactFile[0].imgUrl}
-     phone = {contactFile[0].phone}
-     email = {contactFile[0].email}
-      />
-
-     <Cards
-      name = {contactFile[1].name}
-      imgUrl={contactFile[1].imgUrl}
-      phone={contactFile[1].phone}
-      email={contactFile[1].email}
-      /> 
-
-
-     <Cards
-      name = {contactFile[2].name}
-      imgUrl={contactFile[2].imgUrl}
-      phone={contactFile[2].phone}
-      email={contactFile[2].email}
-      /> 
+      
+     {
+      contactFile.map((item) => {
+        return(
+          <Card 
+           key = {item.id}
+           name = {item.name}
+           imgUrl = {item.imgUrl}
+           phone = {item.phone}
+           email = {item.email}
+          />
+        )
+      })
+     }
 
 
 
