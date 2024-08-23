@@ -2,46 +2,30 @@ import React from "react"
 import contactFile from "./components/Day 1- 3/contact"
 import Card from "./components/Day4/Card"
 import Avatar from "./components/Day4/Avatar"
+import Home from "./components/Day6/Home"
 
 function App() {
+
+ const toggleValue = false
   
-//   const createCard = (item) =>{
-//     return(
-//      <Card 
-//      key = {item.id}
-//      name = {item.name}
-//      imgUrl = {item.imgUrl}
-//      phone = {item.phone}
-//      email = {item.email}
-//     />
-//     )
-//  }
+  // function cutText (){
+  //    document.getElementById("root").style.textDecoration = "line-through"
+  // }
+  // function uncutText (){
+  //    document.getElementById("root").style.textDecoration = "none"
+  // }
+
+
 
 
   return (
     <>
-     <h1 className="text-3xl font-bold mb-9">My Contact</h1>
-      
-     {
-      contactFile.map((item) => {
-        return(
-          <Card 
-           key = {item.id}
-           name = {item.name}
-           imgUrl = {item.imgUrl}
-           phone = {item.phone}
-           email = {item.email}
-          />
-        )
-      })
-     }
-
-
-
-
-  
-
-  
+       <div className="w-[400px] h-[400px] flex justify-center items-center mx-auto">
+          <h1 className={toggleValue ? "decoration-dotted" : 'line-through'}>Buy Milk</h1>
+       
+          {/* <button  className="border border-red-600 p-3">Cut Text</button>
+          <button  className="border border-red-600 p-3">Cut Text</button> */}
+       </div>
     </>
   )
 }
@@ -51,9 +35,6 @@ export default App
 
 
 
-
-//Import the add, multiply, subtract and divide functions
-//from the calculator.jsx file.
 
 
 
